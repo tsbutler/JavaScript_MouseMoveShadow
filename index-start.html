@@ -35,7 +35,10 @@
   const text = document.querySelector('h1');
 
   function shadow(e) {
-
+    // const width = hero.offsetWidth;
+    // const height = hero.offsetHeight;
+    // The line below is equivalent to the two lines above
+    const { offsetWidth: width, offsetHeight: height } = hero;
   }
 
   hero.addEventListener('mousemove', shadow);
