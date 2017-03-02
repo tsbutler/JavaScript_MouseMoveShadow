@@ -39,6 +39,12 @@
     // const height = hero.offsetHeight;
     // The line below is equivalent to the two lines above
     const { offsetWidth: width, offsetHeight: height } = hero;
+    let { offsetX: x, offsetY: y } = e;
+
+    if(this !== e.target) {
+      x = x + e.offsetLeft;
+      y = y + e.offsetTop;
+    }
   }
 
   hero.addEventListener('mousemove', shadow);
